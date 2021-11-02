@@ -12,20 +12,29 @@ Student_Marks = {}
 #____________________________________________________#
 #funcions
 def addstudent():
+    final_mark = 0
     go = True
     newstudent = input("What is the name of the student? ").lower()
     while go == True:
         marks = input("What are the marks of the student? Please give marks one at a time. Type 'done' when marks are entered. ").lower()
         if marks == 'done':
             go = False
+            
+        
         else:
-            Student_Marks[newstudent] = marks
+            marks = int(marks)
+            final_mark = marks + final_mark
+            Student_Marks[newstudent] = final_mark
     
     
     print(Student_Marks)
     
     
 addstudent() 
+
+
+#note - make a description in main to describe what it does - gets kids marks and averages
+
 
 
 
